@@ -1,0 +1,252 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5 Sep, 2017, 7:27:24 PM
+    Author     : sumit
+*/
+
+.timeline {
+    position: relative;
+    padding: 0px 0px 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline .line {
+    position: absolute;
+    width: 4px;
+    display: block;
+    background: currentColor;
+    top: 30px;
+    bottom: 0px;
+    margin-left: 30px;
+}
+
+.timeline .separator {
+    border-top: 1px solid currentColor;
+    padding: 5px;
+    padding-left: 40px;
+    font-style: italic;
+    font-size: .9em;
+    margin-left: 30px;
+}
+
+.timeline .line::before { top: -4px; }
+.timeline .line::after { bottom: -4px; }
+.timeline .line::before,
+.timeline .line::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.timeline .panel {
+    position: relative;
+    margin: 10px 0px 21px 70px;
+    clear: both;
+}
+
+.timeline .panel::before {
+    position: absolute;
+    display: block;
+    top: 8px;
+    left: -24px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: inherit;
+    border-width: 12px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.timeline .panel .panel-heading.icon * { font-size: 20px; vertical-align: middle; line-height: 40px; }
+.timeline .panel .panel-heading.icon {
+    position: absolute;
+    left: -59px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border-radius: 50%;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.timeline .panel-outline {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.timeline .panel-outline .panel-body {
+    padding: 10px 0px;
+}
+
+.timeline .panel-outline .panel-heading:not(.icon),
+.timeline .panel-outline .panel-footer {
+    display: none;
+}
+
+.right-triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 14px 0 13px 10px;
+    border-color: transparent transparent transparent #aaaa22;
+    position: absolute;
+    display: inline-block;
+}
+.panel-title{
+    display: inline-table;
+}
+.step-heading{
+    padding: 5px;
+    background-color: #aaaa22;
+    color:white;
+    display: inline-block;
+}
+.step-label{
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+.step-tag {
+    float: right;
+    background-color: white;
+    padding-top: 3px;
+    border-radius: 5px;
+    font-weight: 600;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-color: #b99e9e;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.workflow-header{
+    position: fixed;
+    margin: -15px;
+    background-color: white;
+    width: inherit;
+    height: 559%;
+    box-shadow: 5px -2px 4px -4px #31708f;
+}
+.page-header{
+    padding-bottom: 0px !important;
+    margin: 0px 0px 0px !important;
+    border-bottom: 0px !important;
+}
+
+.page-header-title{
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.page-body{
+    padding: 10px;
+}
+
+.list-group-item-text{
+    margin-bottom:0px !important;
+}
+
+.page-footer{
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    background-color: #bce8f1;
+    color: #313131;
+    padding: 12px;
+    font-weight: 600;
+    text-align: right;
+}
+#serviceModal .modal-body{
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    max-height: 500px;
+}
+#serviceModal{
+    /*height: 80% !important;*/
+    width: 100% !important;
+    /*margin-left: -35% !important;*/
+}
+.modal-lg{
+    width:75% !important;
+    /*margin-left: 2% !important;*/ 
+}
+
+#serviceModal > .modal-lg > .modal-content{
+    border-radius: 0px;
+}
+
+.read-more-state {
+    display: none !important;
+}
+
+.read-more-target {
+    opacity: 0 ;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+}
+
+.read-more-wrap{
+    font-size: 14px !important;
+    margin-bottom: 0px !important;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+    opacity: 1 !important;
+    font-size: inherit !important;
+    max-height: 999em !important;
+}
+.read-more-state ~ .read-more-trigger:before {
+    content: 'Read more' !important;
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+    content: 'Read less' !important;
+}
+
+.read-more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 .5em;
+    color: #0898eb;
+    font-size: .9em;
+    line-height: 2;
+    border: 1px solid #ddd;
+    border-radius: .25em;
+}
+
+@media (max-width: 768px) {
+    #serviceModal{
+        /*width:90% !important;*/
+        /*margin-left: 2% !important;*/ 
+    }
+    .modal-lg{
+        width:90% !important;
+        /*margin-left: 2% !important;*/ 
+    }
+}
+
+@media (min-width: 992px) {
+    #serviceModal .modal-lg {
+        /*width: 90%;*/
+        /*height: 90px;  control height here */
+    }
+}
+

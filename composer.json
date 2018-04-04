@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mishal/jwt": "^1.0"
+    }
+}
